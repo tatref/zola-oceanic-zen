@@ -130,7 +130,8 @@ pre {
 }
 
 code {
-    font: 16px $font-mono;
+    font-family: "Iosevka",monospace;
+    //font: 16px $font-mono;
 }
 
 p > code {
