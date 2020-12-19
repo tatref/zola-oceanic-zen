@@ -71,9 +71,13 @@
                     <ul>
                         {% for page in subsection.pages %}
                         <li>
+                        {{ page.date | date(format="%d %b %Y") }}
                         <a href="{{ page.permalink | safe}}">
                             {{ page.title }}
                         </a>
+                        {% if page.draft  %}
+                        <i>draft</i>
+                        {% endif %}
                         </li>
                         {% endfor %}
                     </ul>

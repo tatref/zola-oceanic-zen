@@ -46,6 +46,10 @@ p {
     text-align: justify;
 }
 
+.tags {
+    float: right;
+}
+
 footer {
     color: $gray_light;
     padding: 0 $padding $padding $padding;
@@ -90,6 +94,7 @@ a {
 h1 {
     font-size: 24px;
     margin: 5px 0;
+    margin-top: 40px;
     font-weight: bold;
 }
 
@@ -129,6 +134,11 @@ code {
 }
 
 p > code {
+    font-weight: bold;
+    color: $gray;
+}
+
+li > code {
     font-weight: bold;
     color: $gray;
 }
