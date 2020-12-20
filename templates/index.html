@@ -68,7 +68,6 @@
                     <a href="{{ subsection.permalink | safe}}">
                         {{ subsection.title }}
                     </a>
-                    </li>
                     {% if subsection.pages %}
                     <ul>
                         {% for page in subsection.pages %}
@@ -84,6 +83,8 @@
                         {% endfor %}
                     </ul>
                     {% endif %}
+                </li>
+
                 {% endfor %}
                 </ul>
             {% endblock main %}
