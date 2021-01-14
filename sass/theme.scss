@@ -1,15 +1,29 @@
 @import "colors";
 
+//@font-face {
+//    font-family: 'Iosevka';
+//    src: url("/fonts/iosevka-regular.woff2"),
+//        url("/fonts/iosevka-italic.woff2"),
+//        url("/fonts/iosevka-bold.woff2"),
+//        url("/fonts/iosevka-bolditalic.woff2");
+//}
+
 @font-face {
-    font-family: 'Iosevka';
-    src: url("/fonts/iosevka-regular.woff2"),
-        url("/fonts/iosevka-italic.woff2"),
-        url("/fonts/iosevka-bold.woff2"),
-        url("/fonts/iosevka-bolditalic.woff2");
+    font-family: 'IBM Plex Sans';
+    src: url("/fonts/IBMPlexSans-Regular.ttf"),
+        url("/fonts/IBMPlexSans-Italic.ttf");
 }
 
-$font: "Iosevka", sans-serif;
-$font-mono:  "Iosevka", monospace;
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url("/fonts/IBMPlexMono-Light.ttf"),
+        url("/fonts/IBMPlexMono-Regular.ttf"),
+        url("/fonts/IBMPlexMono-SemiBold.ttf"),
+        url("/fonts/IBMPlexMono-Bold.ttf");
+}
+
+$font: "IBM Plex Sans", sans-serif;
+$font-mono:  "IBM Plex Mono", monospace;
 $padding: 8px;
 
 body {
@@ -85,14 +99,19 @@ ul ul {
     padding-left: 1em;
 }
 
+// TODO: https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links
+// https://smallcultfollowing.com/babysteps/
 a {
-    font-size: none;
     color: $blue;
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration:  underline;
+}
+
 h1 {
-    font-size: 24px;
+    font-size: 32px;
     margin: 5px 0;
     margin-top: 40px;
     font-weight: bold;
@@ -130,18 +149,15 @@ pre {
 }
 
 code {
-    font-family: "Iosevka",monospace;
-    //font: 16px $font-mono;
+    font-family: $font-mono;
 }
 
-p > code {
+p > code, li > code {
     font-weight: bold;
-    color: $gray;
-}
-
-li > code {
-    font-weight: bold;
-    color: $gray;
+    color: $blue;
+    background-color: rgb(16, 21, 34);
+    padding-right:  0.4em;
+    padding-left:  0.4em;
 }
 
 .logo {
