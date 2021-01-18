@@ -203,6 +203,10 @@ p > code, li > code {
     }
 }
 
+article img {
+    background-color: $silver_light;
+}
+
 img {
     max-width: 100%;
 }
