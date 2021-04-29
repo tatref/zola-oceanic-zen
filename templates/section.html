@@ -10,6 +10,9 @@
         <a href="{{ p.permalink | safe}}">
             {{ p.title }}
         </a>
+        {% if p.draft %}
+        <i>draft</i>
+        {% endif %}
     </li>
     {% endfor %}
 </ul>
