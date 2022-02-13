@@ -72,7 +72,7 @@
                     <ul>
                         {% for page in subsection.pages %}
                         <li>
-                        {{ page.date | date(format="%d %b %Y") }}
+                        {{ page.date | date(format="%Y-%m-%d") }}
                         <a href="{{ page.permalink | safe}}">
                             {{ page.title }}
                         </a>
